@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Main from './Main';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+//pages
+import PublicVote from './pages/Public/PublicVote';
+import Home from './pages/Home';
+import Success from './pages/Public/Success';
+import Results from './pages/Public/Results';
+import AllResults from './pages/Public/AllResults';
+import Sessions from './pages/Private/Sessions';
+import PrivateVote from './pages/Private/PrivateVote';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Main />
+    </>
   );
 }
 
