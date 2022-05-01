@@ -48,12 +48,12 @@ $(document).ready(function() {
     });
 
     $(".login img").on("click", function() {
-        window.location.href='/PrivateFileUpload';
+        window.location.href='/SelectCreateVote';
         // window.location.href='/Sessions';
     });
 
     $(".loginVote img").on("click", function() {
-        window.location.href='/Sessions';
+        window.location.href='/SelectVote';
     });
 
     $('.mobile-nav-toggle').on("click", function(){

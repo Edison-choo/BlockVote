@@ -19,6 +19,8 @@ import PrivateAssignSuccess from './pages/Private/AssignSuccess';
 
 import Login from './pages/Login';
 import LoginVote from './pages/LoginVote';
+import SelectVote from './pages/SelectVote';
+import SelectCreateVote from './pages/SelectCreateVote';
 import ReleaseSuccess from './pages/AdminPrivate/ReleaseSuccess';
 import CreateSuccess from './pages/AdminPrivate/CreateSuccess';
 
@@ -41,6 +43,7 @@ const Main = () => {
   return (
     <Routes>
         <Route path='/Login' element={<Login/>}></Route>
+        
         <Route path='/LoginVote' element={<LoginVote/>}></Route>
         
         <Route path='/' element={<MainLayout/>}>
@@ -48,6 +51,9 @@ const Main = () => {
         </Route>
         <Route path='/' element={<LoginLayout/>}>
           <Route path='/'  element={<Home/>}></Route>
+          <Route path='/SelectVote' element={<SelectVote/>}></Route>
+          <Route path='/SelectCreateVote' element={<SelectCreateVote/>}></Route>
+          
           {/* Public Client */}
           <Route path='/PublicVote' element={<PublicVote/>}></Route>
           <Route path='/Success' element={<Success />}></Route>

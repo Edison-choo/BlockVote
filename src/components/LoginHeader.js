@@ -27,6 +27,7 @@ const LoginHeader = () => {
                 <ul>
                 <li><a href="/PrivateFileUpload">Upload Voting Format</a></li>
                 <li><a href="/PrivateReleaseVote">Release Voting</a></li>
+                <li><a href="/PrivateAttendance">View Attendance</a></li>
                 <li><a href="/PrivateAdminResults">View Results</a></li>
                 </ul>
               </li>

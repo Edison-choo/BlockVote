@@ -32,10 +32,10 @@ const Attendance = () => {
               </td>
               <td>XGStar</td>
               <td>
-              <i class='bx bx-checkbox'></i>
+              <i class='bx bx-checkbox-square'></i>
               </td>
               <td>Lim Tek Xia</td>
-              <td><i class='bx bx-checkbox-square' ></i></td>
+              <td><i class='bx bx-checkbox' ></i></td>
               <td><i class='bx bx-checkbox-square' ></i></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
@@ -63,8 +63,8 @@ const Attendance = () => {
               <i class='bx bx-checkbox'></i>
               </td>
               <td>Lim Tek Xia</td>
-              <td><i class='bx bx-checkbox-square' ></i></td>
-              <td><i class='bx bx-checkbox-square' ></i></td>
+              <td><i class='bx bx-checkbox' ></i></td>
+              <td><i class='bx bx-checkbox' ></i></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
@@ -74,10 +74,10 @@ const Attendance = () => {
               </td>
               <td>XGStar</td>
               <td>
-              <i class='bx bx-checkbox'></i>
+              <i class='bx bx-checkbox-square'></i>
               </td>
               <td>Lim Tek Xia</td>
-              <td><i class='bx bx-checkbox-square' ></i></td>
+              <td><i class='bx bx-checkbox' ></i></td>
               <td><i class='bx bx-checkbox-square' ></i></td>
             </tr>
             

@@ -1400,3 +1400,12 @@
 i {
   font-size: 30px;
 }
+
+/* select vote */
+.selectVote .icon-box {
+  height: auto
+}
+
+.selectVote a div {
+  width: 100%;
+}
