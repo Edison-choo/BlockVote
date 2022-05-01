@@ -3,7 +3,7 @@ import React from 'react'
 const Login = () => {
   return (
     <>
-        <section id="services" className="login section-bg bvsStyle">
+        <section id="services" className="login loginVote section-bg bvsStyle">
           <div className="container" data-aos="fade-up">
             <div className="info">
                 <div className="address">

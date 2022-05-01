@@ -2,10 +2,13 @@ import React from 'react'
 
 import Breadcrumb from '../../components/Breadcrumb'
 
+import Notification from '../../components/Notification'
+
 const PrivateVote = () => {
   return (
     <>
     <Breadcrumb name="Vote" />
+    <Notification/>
       <section id="services" className="privateVote section-bg bvsStyle">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
@@ -72,7 +75,7 @@ const PrivateVote = () => {
               
 
               <div id='btn-div' style={{marginTop:"20px"}}>
-              <a id='btn-bvs' href="/Success" className="btn-get-started scrollto">Vote</a>
+              <a id='btn-bvs' className="btn-get-started scrollto vote-submit">Vote</a>
             </div>
             </div>
           </div>

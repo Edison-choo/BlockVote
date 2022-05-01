@@ -11,8 +11,8 @@ const Home = () => {
               <h2>We aspire to digitize trust to protect every stakeholder’s right holistically, efficiently, securely and seamlessly.
 </h2>
               <div>
-                <a href="/PublicVote" className="btn-get-started scrollto">Individual</a>
-                <a href="/Sessions" className="btn-get-started scrollto" style={{marginLeft:"12px"}}>Business</a>
+                <a href="/LoginVote" className="btn-get-started scrollto">I am here to vote</a>
+                <a href="/Login" className="btn-get-started scrollto" style={{marginLeft:"12px"}}>I want to create a vote</a>
               </div>
             </div>
             <div className="col-lg-6 order-1 order-lg-2 hero-img">

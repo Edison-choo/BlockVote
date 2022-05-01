@@ -29,8 +29,8 @@ const Results = () => {
           <th scope="col">Time Updates</th>
         </tr>
       </thead>
-      <tbody>
-        <tr scope="row">
+      <tbody className='paginationAll'>
+        <tr scope="row" >
           <td>
             1
           </td>
@@ -103,12 +103,25 @@ const Results = () => {
         
       </tbody>
     </table>
+    
   </div>
+  <div className='pageNum'>
+    <span>1/1</span> page
+
+  </div>
+  <div className='pagination' style={{margin:"8px 0"}}>
+              <div className='pageIcon leftIcon'>
+              <i class='bx bx-left-arrow'></i>
+            </div>
+            <div className='pageIcon rightIcon'>
+              <i class='bx bx-right-arrow'></i>
+            </div>
+            </div>
 
 
 
         <div id='btn-div'>
-          <a id='btn-bvs' href="/" className="btn-get-started scrollto">RELEASE RESULTS</a>
+          <a id='btn-bvs' href="#" className="btn-get-started scrollto">RELEASE RESULTS</a>
         </div>
       </div>
     </section>

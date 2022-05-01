@@ -1,4 +1,5 @@
 
+
 $(document).ready(function() {
     console.log("Loading");
     
@@ -9,26 +10,50 @@ $(document).ready(function() {
         $("#choice").val($(".selectActive h4").text());
     })
 
-    // var voted = 0;
-
     $(".privateVote .Choice").on("click", function() {
         console.log("clicked");
         $(this).parent().children().removeClass("choiceActive");
         $(this).parent().find(".chosen").val($(this).find("h5").text());
-        console.log($(this).parent().first().html())
         $(this).addClass("choiceActive");
-        // voted += 1;
 
-        // var size = $(".privateVote .Question").length;
-        // console.log(voted, size)
-        // if (voted == size) {
-        //     console.log("Able to proceed");
+        var size = $(".privateVote .Question").length;
+        var voted = $(".privateVote .choiceActive").length;
+        console.log(voted, size)
+        if (voted == size) {
+            console.log("Able to proceed");
             
-        // }
+        }
+    });
+
+    var publicVote = 0;
+
+    $(".vote .vote-submit").on("click", function() {
+        if ($(".vote .selectActive").length == 1) {
+            window.location.href='/Success';
+        } else {
+            $(".danger-alert").show();
+        }
+
+    });
+
+    $(".privateVote .vote-submit").on("click", function() {
+        var size = $(".privateVote .Question").length;
+        var voted = $(".privateVote .choiceActive").length;
+        if (voted == size) {
+            window.location.href='/PrivateSuccess';
+        } else {
+            $(".danger-alert").show();
+        }
+
     });
 
     $(".login img").on("click", function() {
-        window.location.href='/PublicVote';
+        window.location.href='/PrivateFileUpload';
+        // window.location.href='/Sessions';
+    });
+
+    $(".loginVote img").on("click", function() {
+        window.location.href='/Sessions';
     });
 
     $('.mobile-nav-toggle').on("click", function(){
@@ -36,4 +61,261 @@ $(document).ready(function() {
         $(this).toggleClass('bi-list')
         $(this).toggleClass('bi-x')
     });
+
+    $('.navbar .dropdown').on("click", function(){
+        console.log("extending navbar...")
+        $(this).find("ul").toggleClass('dropdown-active')
+    });
+
+    $(".alert .close").on("click", function() {
+        $(this)
+          .parent(".alert")
+          .fadeOut();
+      });
+
+    // $(".paginationAll li:nth-child(-n+5)").toggleClass("show");
+
+    $(".privateRelease .rightIcon").on("click", function() {
+        if ($(".paginationAll .show").last().index()+1 == $(".paginationAll > div").length) {
+            console.log("max range");
+        } else {
+            console.log("run")
+            console.log($(".paginationAll .show").last().html())
+            var index = $(".paginationAll .show").last().index() + 1;
+            $(".privateRelease .paginationAll div").removeClass("show");
+            $(`.privateRelease .paginationAll > div:nth-child(${index + 1})`).toggleClass("show");
+            $(`.privateRelease .paginationAll > div:nth-child(${index + 2})`).toggleClass("show");
+            $(`.privateRelease .paginationAll > div:nth-child(${index + 3})`).toggleClass("show");
+            $(`.privateRelease .paginationAll > div:nth-child(${index + 4})`).toggleClass("show");
+            $(`.privateRelease .paginationAll > div:nth-child(${index + 5})`).toggleClass("show");
+            console.log(index, $(`.privateRelease .paginationAll > div:nth-child(${index + 1})`).html())
+            checkPage();
+            $(".leftIcon").removeClass("pageIcon-disabled");
+        }
+        
+    });
+
+    $(".privateRelease .leftIcon").on("click", function() {
+        if ($(".paginationAll .show").first().index()+1==1) {
+            console.log("max range");
+        } else {
+            console.log("run")
+            var index = $(".paginationAll .show").first().index() + 1;
+            $(".privateRelease .paginationAll div").removeClass("show");
+            $(`.privateRelease .paginationAll > div:nth-child(${index - 1})`).toggleClass("show");
+            $(`.privateRelease .paginationAll > div:nth-child(${index - 2})`).toggleClass("show");
+            $(`.privateRelease .paginationAll > div:nth-child(${index - 3})`).toggleClass("show");
+            $(`.privateRelease .paginationAll > div:nth-child(${index - 4})`).toggleClass("show");
+            $(`.privateRelease .paginationAll > div:nth-child(${index - 5})`).toggleClass("show");
+            checkPage();
+            $(".rightIcon").removeClass("pageIcon-disabled");
+        }
+    });
+
+    //public release
+
+    $(".publicRelease .rightIcon").on("click", function() {
+        if ($(".paginationAll .show").last().index()+1 == $(".paginationAll li").length) {
+            console.log("max range");
+        } else {
+            console.log("run")
+            var index = $(".paginationAll .show").last().index() + 1;
+            $(".paginationAll li").removeClass("show");
+            $(`.paginationAll li:nth-child(${index + 1})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index + 2})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index + 3})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index + 4})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index + 5})`).toggleClass("show");
+            checkPage();
+            $(".leftIcon").removeClass("pageIcon-disabled");
+        }
+        
+        
+        
+    });
+
+    $(".publicRelease .leftIcon").on("click", function() {
+        if ($(".paginationAll .show").first().index()+1==1) {
+            console.log("max range");
+        } else {
+            console.log("run")
+            var index = $(".release .paginationAll .show").first().index() + 1;
+            $(".paginationAll li").removeClass("show");
+            $(`.paginationAll li:nth-child(${index - 1})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index - 2})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index - 3})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index - 4})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index - 5})`).toggleClass("show");
+            checkPage();
+            $(".rightIcon").removeClass("pageIcon-disabled");
+        }
+
+        
+    });
+
+    // ownVote
+
+    $(".ownVote .rightIcon").on("click", function() {
+        if ($(".paginationAll .show").last().index()+1 == $(".paginationAll li").length) {
+            console.log("max range");
+        } else {
+            console.log("run")
+            var index = $(".paginationAll .show").last().index() + 1;
+            $(".paginationAll li").removeClass("show");
+            $(`.paginationAll li:nth-child(${index + 1})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index + 2})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index + 3})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index + 4})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index + 5})`).toggleClass("show");
+            checkPage();
+            $(".leftIcon").removeClass("pageIcon-disabled");
+        }
+        
+        
+        
+    });
+
+    $(".ownVote .leftIcon").on("click", function() {
+        if ($(".paginationAll .show").first().index()+1==1) {
+            console.log("max range");
+        } else {
+            console.log("run")
+            var index = $(".release .paginationAll .show").first().index() + 1;
+            $(".paginationAll li").removeClass("show");
+            $(`.paginationAll li:nth-child(${index - 1})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index - 2})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index - 3})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index - 4})`).toggleClass("show");
+            $(`.paginationAll li:nth-child(${index - 5})`).toggleClass("show");
+            checkPage();
+            $(".rightIcon").removeClass("pageIcon-disabled");
+        }
+
+        
+    });
+
+    // $(".sessions .paginationAll a:nth-child(-n+5)").toggleClass("show");
+
+    $(".sessions .rightIcon").on("click", function() {
+        if ($(".paginationAll .show").last().index()+1 == $(".paginationAll a").length) {
+            console.log("max range");
+        } else {
+            console.log("run")
+            var index = $(".paginationAll .show").last().index() + 1;
+            $(".paginationAll a").removeClass("show");
+            $(`.paginationAll a:nth-child(${index + 1})`).toggleClass("show");
+            $(`.paginationAll a:nth-child(${index + 2})`).toggleClass("show");
+            $(`.paginationAll a:nth-child(${index + 3})`).toggleClass("show");
+            $(`.paginationAll a:nth-child(${index + 4})`).toggleClass("show");
+            $(`.paginationAll a:nth-child(${index + 5})`).toggleClass("show");
+            checkPage();
+            $(".leftIcon").removeClass("pageIcon-disabled");
+        }
+        
+    });
+
+    $(".sessions .leftIcon").on("click", function() {
+        if ($(".sessions .paginationAll .show").first().index()+1==1) {
+            console.log("max range");
+        } else {
+            console.log("run")
+            var index = $(".paginationAll .show").first().index() + 1;
+            $(".paginationAll a").removeClass("show");
+            $(`.paginationAll a:nth-child(${index - 1})`).toggleClass("show");
+            $(`.paginationAll a:nth-child(${index - 2})`).toggleClass("show");
+            $(`.paginationAll a:nth-child(${index - 3})`).toggleClass("show");
+            $(`.paginationAll a:nth-child(${index - 4})`).toggleClass("show");
+            $(`.paginationAll a:nth-child(${index - 5})`).toggleClass("show");
+            checkPage();
+            $(".rightIcon").removeClass("pageIcon-disabled");
+        }
+    });
+
+    // $(".allResults .paginationAll tr:nth-child(-n+10)").toggleClass("show");
+
+    $(".allResults .rightIcon").on("click", function() {
+        if ($(".paginationAll .show").last().index()+1 == $(".paginationAll tr").length) {
+            console.log("max range");
+        } else {
+            console.log("run")
+            var index = $(".paginationAll .show").last().index() + 1;
+            $(".paginationAll tr").removeClass("show");
+            $(`.paginationAll tr:nth-child(${index + 1})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index + 2})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index + 3})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index + 4})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index + 5})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index + 6})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index + 7})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index + 8})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index + 9})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index + 10})`).toggleClass("show");
+            checkPage();
+            $(".leftIcon").removeClass("pageIcon-disabled");
+        }
+        
+    });
+
+    $(".allResults .leftIcon").on("click", function() {
+        if ($(".allResults .paginationAll .show").first().index()+1==1) {
+            console.log("max range");
+        } else {
+            console.log("run")
+            var index = $(".paginationAll .show").first().index() + 1;
+            $(".paginationAll tr").removeClass("show");
+            $(`.paginationAll tr:nth-child(${index - 1})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index - 2})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index - 3})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index - 4})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index - 5})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index - 6})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index - 7})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index - 8})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index - 9})`).toggleClass("show");
+            $(`.paginationAll tr:nth-child(${index - 10})`).toggleClass("show");
+            checkPage();
+            $(".rightIcon").removeClass("pageIcon-disabled");
+        }
+        
+    });
+
+    window.onload = function() {
+        $(".publicRelease .paginationAll li:nth-child(-n+5)").toggleClass("show");
+        $(".privateRelease .paginationAll>div:nth-child(-n+5)").toggleClass("show");
+        $(".sessions .paginationAll a:nth-child(-n+5)").toggleClass("show");
+        $(".allResults .paginationAll tr:nth-child(-n+10)").toggleClass("show");
+        $(".ownVote .paginationAll li:nth-child(-n+5)").toggleClass("show");
+
+        checkPage();
+    }
+    
 })
+
+function checkPage() {
+    var page = $(".paginationAll .show").first().index()+1 != 1 ? Math.ceil(($(".paginationAll .show").first().index()+1 - $(".paginationAll .spacer").children().length)/5) : 1;
+    var totalPage = Math.ceil(($(".paginationAll").children().length - $(".paginationAll .spacer").children().length)/5);
+
+    if ($(".paginationAll .show").first().index()+1==1) {
+        $(".leftIcon").toggleClass("pageIcon-disabled");
+    }
+
+    if ($(".paginationAll .show").last().index()+1 == $(".paginationAll li").length) {
+        $(".rightIcon").toggleClass("pageIcon-disabled");
+    }
+
+    if ($(".paginationAll .show").last().index()+1 == $(".paginationAll a").length) {
+        $(".rightIcon").toggleClass("pageIcon-disabled");
+    }
+
+    if ($(".paginationAll .show").last().index()+1 == $(".paginationAll tr").length) {
+        $(".rightIcon").toggleClass("pageIcon-disabled");
+    }
+
+    if ($(".paginationAll .show").last().index()+1 == $(".paginationAll > div").length) {
+        $(".rightIcon").toggleClass("pageIcon-disabled");
+    }
+
+    $(".allResults")
+    $(".sessions")
+    $(".pageNum span").text(`${page}/${totalPage}`)
+}

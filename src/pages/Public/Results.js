@@ -49,7 +49,7 @@ const Results = () => {
               </div>
               </div>
             </div>
-            <h3><a href='/AllResults'>View overall result</a></h3>
+            <h3><a style={{textDecoration:"underline"}} href='/AllResults'>View overall result</a></h3>
             <div id='btn-div'>
               <a id='btn-bvs' href="/" className="btn-get-started scrollto">RETURN TO HOME</a>
             </div>

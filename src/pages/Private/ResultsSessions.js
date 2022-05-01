@@ -11,10 +11,10 @@ const Sessions = () => {
             <div className="section-title">
               
               <p>Hi XGStars Pte Ltd.</p>
-              <h2>Welcome to the Annual General Meeting Voting Sessions you are eligible for </h2>
+              <h2>Select Annual General Meeting Voting Sessions to view Results</h2>
             </div>
             <div className="paginationAll row">
-            <a href='/PrivateVote'>
+            <a href='/PrivateAllResults'>
               <div className="col-md-12 col-lg-12 d-flex justify-content-between" data-aos="zoom-in" data-aos-delay={100}>
               
                 <div className="info">

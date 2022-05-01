@@ -1,11 +1,13 @@
 import React from 'react'
 
 import Breadcrumb from '../../components/Breadcrumb'
+import Notification from '../../components/Notification'
 
 const PublicVote = () => {
   return (
     <>
     <Breadcrumb name="Vote" />
+    <Notification />
       <section id="services" className="vote section-bg bvsStyle">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
@@ -37,7 +39,7 @@ const PublicVote = () => {
             <form>
               <input type={"hidden"} id="choice" />
             <div id='btn-div'>
-              <a id='btn-bvs' href="/Success" className="btn-get-started scrollto">Vote</a>
+              <a id='btn-bvs' className="btn-get-started scrollto vote-submit">Vote</a>
             </div>
             </form>
           </div>

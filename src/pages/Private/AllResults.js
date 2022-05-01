@@ -18,14 +18,13 @@ const AllResults = () => {
           <thead>
             <tr>  
               <th scope="col">#</th>
-              <th scope="col">Electoral Division</th>
-              <th scope="col">Area</th>
-              <th scope="col">PAP Voted</th>
-              <th scope="col">WP Votes</th>
-              <th scope="col">SDP Voted</th>
-              <th scope="col">PSP Voted</th>
-              <th scope="col">SPP Votes</th>
-              <th scope="col">Winning Party</th>
+              <th scope="col">Resolution</th>
+              <th scope="col">For</th>
+              <th scope="col">% of votes cast</th>
+              <th scope="col">Against</th>
+              <th scope="col">% of votes cast</th>
+              <th scope="col">Abstain</th>
+              <th scope="col">% of votes cast</th>
               <th scope="col">Time Updated</th>
             </tr>
           </thead>
@@ -34,17 +33,16 @@ const AllResults = () => {
               <td>
                 1
               </td>
-              <td><a href="#">Chua Chu Kang GRC</a></td>
+              <td>To receive and conside the Company's 2019 Annual report and accounts</td>
               <td>
-                North
+                2,522,660
               </td>
-              <td>500</td>
-              <td>100</td>
-              <td>30</td>
-              <td>-</td>
-              <td>-</td>
-              <td>PAP</td>
-              <td>24/2/2022 1930</td>
+              <td>99.8%</td>
+              <td>3650</td>
+              <td>0.01%</td>
+              <td>3650</td>
+              <td>0.01%</td>
+              <td>22/2/22 2359</td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
@@ -52,17 +50,16 @@ const AllResults = () => {
             <td>
                 2
               </td>
-              <td><a href="#">Pasir Ris Punggol GRC</a></td>
+              <td>To approve the Directors' remuneration report in the Company's 2019 Annual report and accounts</td>
               <td>
-                North
+                2,522,660
               </td>
-              <td>500</td>
-              <td>100</td>
-              <td>30</td>
-              <td>-</td>
-              <td>-</td>
-              <td>PAP</td>
-              <td>24/2/2022 1930</td>
+              <td>99.8%</td>
+              <td>3650</td>
+              <td>0.01%</td>
+              <td>3650</td>
+              <td>0.01%</td>
+              <td>22/2/22 2359</td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
@@ -70,17 +67,16 @@ const AllResults = () => {
             <td>
                 3
               </td>
-              <td><a href="#">Sembawang GRC</a></td>
+              <td>To elect Amanda Blanc Annual report and accounts</td>
               <td>
-                North
+                2,522,660
               </td>
-              <td>500</td>
-              <td>100</td>
-              <td>30</td>
-              <td>-</td>
-              <td>-</td>
-              <td>PAP</td>
-              <td>24/2/2022 1930</td>
+              <td>99.8%</td>
+              <td>3650</td>
+              <td>0.01%</td>
+              <td>3650</td>
+              <td>0.01%</td>
+              <td>22/2/22 2359</td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
@@ -88,17 +84,16 @@ const AllResults = () => {
             <td>
                 4
               </td>
-              <td><a href="#">Hong Kah North GRC</a></td>
+              <td>To authorise the Company to purchase its own 8 3/8% preference shares</td>
               <td>
-                North
+                2,522,660
               </td>
-              <td>500</td>
-              <td>100</td>
-              <td>30</td>
-              <td>-</td>
-              <td>-</td>
-              <td>PAP</td>
-              <td>24/2/2022 1930</td>
+              <td>99.8%</td>
+              <td>3650</td>
+              <td>0.01%</td>
+              <td>3650</td>
+              <td>0.01%</td>
+              <td>22/2/22 2359</td>
             </tr>
             
           </tbody>
@@ -116,6 +111,7 @@ const AllResults = () => {
               <i class='bx bx-right-arrow'></i>
             </div>
             </div>
+
 
 
             <div id='btn-div'>

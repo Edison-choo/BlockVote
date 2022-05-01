@@ -17,13 +17,13 @@ const Success = () => {
             <img src="img/bvs/QR_code_for_mobile_English_Wikipedia.svg.png" className="img-fluid animated" alt />
 
                 <div className="address">
-                    <h4>CryptoVote Card</h4>
-                    <p>Address</p>
+                    <h4>CrytoVote Card</h4>
+                    <p>Voter's address: 001029293893809xd</p>
                   </div>
             </div>
             <div id='btn-div' className='row d-flex justify-content-center'>
                 <div className="col-md-6 col-lg-4">
-                <a id='btn-bvs' href="/Results" className="btn-get-started scrollto">VIEW VOTING RESULT</a>
+                <a id='btn-bvs' href="/PrivateAllResults" className="btn-get-started scrollto">VIEW VOTING RESULT</a>
                 </div>
                 <div className="col-md-6 col-lg-4">
                 <a id='btn-bvs' href="/" className="btn-get-started scrollto">RETURN TO HOME</a>         
