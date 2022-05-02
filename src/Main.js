@@ -18,22 +18,26 @@ import PrivateProxyAssigned from './pages/Private/ProxyAssigned';
 import PrivateAssignSuccess from './pages/Private/AssignSuccess';
 
 import Login from './pages/Login';
+import Register from './pages/Register';
 import LoginVote from './pages/LoginVote';
 import SelectVote from './pages/SelectVote';
 import SelectCreateVote from './pages/SelectCreateVote';
-import ReleaseSuccess from './pages/AdminPrivate/ReleaseSuccess';
-import CreateSuccess from './pages/AdminPrivate/CreateSuccess';
+
 
 import PublicFileUpload from './pages/AdminPublic/FileUpload';
 import PublicAdminResults from './pages/AdminPublic/Results';
 import PublicReleaseVote from './pages/AdminPublic/ReleaseVote';
 import PhotoUpload from './pages/AdminPublic/PhotoUpload';
+import PublicSelectTime from './pages/AdminPublic/SelectTIme';
+import PublicCreateSuccess from './pages/AdminPublic/CreateSuccess';
 
 import PrivateFileUpload from './pages/AdminPrivate/FileUpload';
 import PrivateAdminResults from './pages/AdminPrivate/Results';
 import PrivateReleaseVote from './pages/AdminPrivate/ReleaseVote';
 import PrivateSelectTime from './pages/AdminPrivate/SelectTIme';
 import PrivateAttendance from './pages/AdminPrivate/Attendance';
+import ReleaseSuccess from './pages/AdminPrivate/ReleaseSuccess';
+import CreateSuccess from './pages/AdminPrivate/CreateSuccess';
 
 //Layout
 import MainLayout from './layouts/mainLayout';
@@ -43,7 +47,7 @@ const Main = () => {
   return (
     <Routes>
         <Route path='/Login' element={<Login/>}></Route>
-        
+        <Route path='/Register' element={<Register/>}></Route>
         <Route path='/LoginVote' element={<LoginVote/>}></Route>
         
         <Route path='/' element={<MainLayout/>}>
@@ -75,6 +79,8 @@ const Main = () => {
           <Route path='/PublicAdminResults' element={<PublicAdminResults />}></Route>
           <Route path='/PublicReleaseVote' element={<PublicReleaseVote />}></Route>
           <Route path='/PublicPhotoUpload' element={<PhotoUpload />}></Route>
+          <Route path='/PublicSelectTime' element={<PublicSelectTime/>}></Route>
+          <Route path='/PublicCreateSuccess' element={<PublicCreateSuccess/>}></Route>
 
           {/* Private Admin */}
           <Route path='/PrivateFileUpload' element={<PrivateFileUpload />}></Route>

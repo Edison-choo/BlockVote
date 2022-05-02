@@ -1409,3 +1409,20 @@ i {
 .selectVote a div {
   width: 100%;
 }
+
+/* register */
+.register p {
+  padding-bottom: 72px;
+
+}
+
+.login .statement {
+  margin-top: 12px;
+  font-size:0.9em;
+}
+
+.register .statement {
+  margin-top: 64px;
+  font-size:0.9em;
+}
+

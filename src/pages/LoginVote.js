@@ -14,6 +14,7 @@ const Login = () => {
               <div id='btn-div' className='row d-flex justify-content-center'>
                 <a id='btn-bvs' href="#about" className="btn-get-started scrollto">Login Using Password</a>
               </div>
+              <div className='statement'>Don't have an account? <a href='/Register'>Sign Up</a></div>
             </div>
             
           </div>
