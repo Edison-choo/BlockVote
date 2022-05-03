@@ -19,14 +19,12 @@ const LoginHeader = () => {
               <li className="dropdown"><a href="#"><span>Public</span> <i className="bi bi-chevron-right"></i></a>
                 <ul>
                 <li><a href="/PublicFileUpload">Upload Voting Format</a></li>
-                <li><a href="/PublicReleaseVote">Release Voting</a></li>
                 <li><a href="/PublicAdminResults">View Results</a></li>
                 </ul>
               </li>
               <li className="dropdown"><a href="#"><span>Private</span> <i className="bi bi-chevron-right"></i></a>
                 <ul>
                 <li><a href="/PrivateFileUpload">Upload Voting Format</a></li>
-                <li><a href="/PrivateReleaseVote">Release Voting</a></li>
                 <li><a href="/PrivateAttendance">View Attendance</a></li>
                 <li><a href="/PrivateAdminResults">View Results</a></li>
                 </ul>
