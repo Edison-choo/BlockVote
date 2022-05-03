@@ -91,6 +91,21 @@ const ReleaseVote = () => {
                 </div>
                 
               </div>
+              <div className='steps-item'>
+              <hr className='between' />
+              </div>
+              <div className='steps-item'>
+              <div className='steps-icon'>
+              <i class='bx bxs-calendar'></i>
+                </div>
+              <div className='steps-title'>
+                  Select Date Range
+                </div>
+                <div className='steps-subtitle'>
+                  The time duration of vote
+                </div>
+                
+              </div>
             </div>
             <ul className="faq-list paginationAll" data-aos="fade-up" data-aos-delay={100}>
               {division.map(function(key, index){
@@ -128,7 +143,7 @@ const ReleaseVote = () => {
             </div>
             </div>
             <div id='btn-div'>
-              <a id='btn-bvs' href="#" className="btn-get-started scrollto">Release Vote</a>
+              <a id='btn-bvs' href="/PublicSelectTime" className="btn-get-started scrollto">Next</a>
             </div>
           </div>
         </section>

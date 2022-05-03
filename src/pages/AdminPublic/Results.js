@@ -121,7 +121,7 @@ const Results = () => {
 
 
         <div id='btn-div'>
-          <a id='btn-bvs' href="#" className="btn-get-started scrollto">RELEASE RESULTS</a>
+          <a id='btn-bvs' href="/PrivateReleaseSuccess" className="btn-get-started scrollto">RELEASE RESULTS</a>
         </div>
       </div>
     </section>

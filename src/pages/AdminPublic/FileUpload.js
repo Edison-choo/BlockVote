@@ -102,6 +102,21 @@ const FileUpload = () => {
                 </div>
                 
               </div>
+              <div className='steps-item'>
+              <hr className='between' />
+              </div>
+              <div className='steps-item'>
+              <div className='steps-icon'>
+              <i class='bx bxs-calendar'></i>
+                </div>
+              <div className='steps-title'>
+                  Select Date Range
+                </div>
+                <div className='steps-subtitle'>
+                  The time duration of vote
+                </div>
+                
+              </div>
             </div>
             <div className="row">
               
