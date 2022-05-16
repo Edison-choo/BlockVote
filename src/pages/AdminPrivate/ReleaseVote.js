@@ -15,16 +15,23 @@ const PrivateVote = () => {
   useEffect(()=> {
     csv(data1).then(data => {
       setData(data);
+      window.localStorage.setItem("data", data);
     })
   }, []);
 
   useEffect(()=> {
     csv("/data/private.csv").then(data => {
       console.log("test",data)
+      window.localStorage.setItem("data", JSON.stringify(data));
     })
   }, []);
 
   console.log(data);
+
+  if(data.length === 0){
+    console.log("rendering");
+    return null; //You can change here to put a customized loading spinner 
+  }
 
   return (
     <>

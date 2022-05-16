@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Home = () => {
+  // function to derive Verify url with the query parameters 
+  
+
   return (
     <>
       <section id="hero" className="d-flex align-items-center">

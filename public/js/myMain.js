@@ -1,13 +1,18 @@
 
+function loadVote() {
+    $(".privateVote .Choice").on("click", ()=>{
+        console.log("test");
+    });
+}
 
 $(document).ready(function() {
     console.log("Loading");
-    
+
     $(".vote .icon-box").on("click", function() {
         console.log("Test");
         $(".vote .icon-box").removeClass("selectActive");
         $(this).addClass("selectActive")
-        $("#choice").val($(".selectActive h4").text());
+        $("#choice").val($(".selectActive input").val());
     })
 
     $(".privateVote .Choice").on("click", function() {
@@ -319,3 +324,4 @@ function checkPage() {
     $(".sessions")
     $(".pageNum span").text(`${page}/${totalPage}`)
 }
+

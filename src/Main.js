@@ -18,10 +18,13 @@ import PrivateProxyAssigned from './pages/Private/ProxyAssigned';
 import PrivateAssignSuccess from './pages/Private/AssignSuccess';
 
 import Login from './pages/Login';
+import Loading from './pages/Loading';
 import Register from './pages/Register';
 import LoginVote from './pages/LoginVote';
 import SelectVote from './pages/SelectVote';
 import SelectCreateVote from './pages/SelectCreateVote';
+import FaceRecon from './pages/FaceRecon';
+import FaceReconSuccess from './pages/FaceReconSuccess';
 
 
 import PublicFileUpload from './pages/AdminPublic/FileUpload';
@@ -49,6 +52,9 @@ const Main = () => {
         <Route path='/Login' element={<Login/>}></Route>
         <Route path='/Register' element={<Register/>}></Route>
         <Route path='/LoginVote' element={<LoginVote/>}></Route>
+        <Route path='/FaceRecon' element={<FaceRecon/>}></Route>
+        <Route path='/Loading' element={<Loading/>}></Route>
+        
         
         <Route path='/' element={<MainLayout/>}>
           <Route path='/'  element={<Home/>}></Route>
@@ -57,6 +63,7 @@ const Main = () => {
           <Route path='/'  element={<Home/>}></Route>
           <Route path='/SelectVote' element={<SelectVote/>}></Route>
           <Route path='/SelectCreateVote' element={<SelectCreateVote/>}></Route>
+          <Route path='/FaceReconSuccess' element={<FaceReconSuccess/>}></Route>
           
           {/* Public Client */}
           <Route path='/PublicVote' element={<PublicVote/>}></Route>

@@ -15,10 +15,11 @@ const PhotoUpload = () => {
   useEffect(()=> {
     csv(data1).then(data => {
       setData(data);
+      window.localStorage.setItem("data", JSON.stringify(data));
     })
   }, []);
 
-  window.localStorage.setItem("data", JSON.stringify(data));
+  
 
   useEffect(()=> {
     csv(Abbr).then(data => {
@@ -27,6 +28,7 @@ const PhotoUpload = () => {
           abbrdict[data[i]["abbreviation"]] = data[i]["political_party"]
       }
       setAbbr(abbrdict);
+      window.localStorage.setItem("abbr", JSON.stringify(abbrdict));
     })
   }, []);
 
@@ -67,7 +69,7 @@ const PhotoUpload = () => {
 				console.error('Error:', error);
 			});
 
-      window.location.href = "/PublicReleaseVote";
+      // window.location.href = "/PublicReleaseVote";
 	};
 
   // useEffect(()=> {

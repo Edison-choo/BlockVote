@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import Web3 from 'web3'
 
 import Breadcrumb from '../../components/Breadcrumb'
 
 const OwnVote = () => {
+  
   return (
     <>
     <Breadcrumb name="Own Vote" />

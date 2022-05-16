@@ -11,19 +11,20 @@ const ReleaseVote = () => {
   const [photo, setPhoto] = useState({});
 
   useEffect(()=> {
-    setData(JSON.parse(window.localStorage.getItem("data")));
-    setPhoto(JSON.parse(window.localStorage.getItem("photos")));
-    console.log(photo)
-  }, []);
-
-  useEffect(()=> {
     csv(Abbr).then(data => {
       var abbrdict = {}
       for (var i in data) {
           abbrdict[data[i]["abbreviation"]] = data[i]["political_party"]
       }
       setAbbr(abbrdict);
+      console.log(abbrdict);
     })
+  }, []);
+
+  useEffect(()=> {
+    setData(JSON.parse(window.localStorage.getItem("data")));
+    setPhoto(JSON.parse(window.localStorage.getItem("photos")));
+    console.log(photo)
   }, []);
 
   var mappedData = [];
@@ -38,6 +39,12 @@ const ReleaseVote = () => {
     }
     
   }
+
+  if(data.length === 0){
+    console.log("rendering");
+    return null; //You can change here to put a customized loading spinner 
+  }
+
   return (
     <>
     <Breadcrumb name="Release Vote" />

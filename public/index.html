@@ -9,6 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -35,6 +36,62 @@
     <link href="%PUBLIC_URL%/css/myStyle.css" rel="stylesheet">
   </head>
   <body>
+    <script src="https://stg-id.singpass.gov.sg/static/ndi_embedded_auth.js"></script>
+
+    <!-- <script>
+      var authParamsSupplier = async() => {
+    return {state: "dummySessionState", nonce: "dummySessionNonce"};
+
+  };
+
+  const onError = (errorId, message) => {
+    console.log(`onError.errorId:${errorId} message:${message}`);
+  };
+
+  const initAuthSessionResponse = window.NodeIterator.initAuthSession(
+    'ndi-qr',
+    {
+      clientId: '',
+      redirectUri: '',
+      scope: 'openId',
+      responseType: 'code'
+    },
+    authParamsSupplier,
+    onError
+  );
+
+  console.log('initAuthSession: ', initAuthSessionResponse);
+
+    </script> -->
+
+<script>
+  async function init() {
+    const authParamsSupplier = async () => {
+      // Replace the below with an `await`ed call to initiate an auth session on your backend
+      // which will generate state+nonce values, e.g
+      return { state: "dummySessionState", nonce: "dummySessionNonce" };
+    };
+
+    const onError = (errorId, message) => {
+      console.log(`onError. errorId:${errorId} message:${message}`);
+    };
+
+    const initAuthSessionResponse = window.NDI.initAuthSession(
+      'ndi-qr',
+      {
+        clientId: 'T5sM5a53Yaw3URyDEv2y9129CbElCN2F', // Replace with your client ID
+        redirectUri: 'https://partner.gov.sg',        // Replace with a registered redirect URI
+        scope: 'openid',
+        responseType: 'code'
+      },
+      authParamsSupplier,
+      onError
+    );
+
+    console.log('initAuthSession: ', initAuthSessionResponse);
+  }
+
+</script>
     
     <div id="root"></div>
 

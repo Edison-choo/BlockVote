@@ -1426,3 +1426,24 @@ i {
   font-size:0.9em;
 }
 
+.faceRecon {
+  height: 100%;
+}
+/* 
+.faceRecon video {
+  height: 648px;
+} */
+
+.faceRecon .address h4 {
+  padding: 52px 0 0 0px;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #7a6960;
+}
+.faceRecon .address p {
+  padding: 0 0 16px 0px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  color: #ab9d95;
+}
